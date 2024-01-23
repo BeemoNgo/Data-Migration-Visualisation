@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation"/>
+	<meta name="keywords"		  content="HTML, CSS, D3"/>
+	<meta name="author"			  content="Thao Ngan Ngo"/>
+
+	<title>Task 2.1 D3 Data Binding</title>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <h1>Creating and Formatting Paragraph Elements with D3</h1>
+
+    <script>
+
+        var dataset = [14, 5, 26, 23, 9];
+
+                     d3.select("body") //select the body of the document
+                        .selectAll("p") //select all p
+                        .data(dataset) // count and prepare the data values
+                        .enter() //create a new place holder element
+                        .append("p") //append a paragraph element to the element selected previously
+                        .text(function(d) { //anonymous function, accept d from the data set as an input and loops through  each value
+                            console.log(d);
+                            return "Warning: Joe watched " + d + " cat videos today. ";
+                        })
+                        .style("color", function(d){
+                            if (d>10){
+                                return "red";
+                            }
+
+                    });
+
+    </script>
+
+    <footer style="color:grey">COS20045 Data Visualisation<br>
+        Thao Ngan Ngo</footer>
+</body>
+</html>

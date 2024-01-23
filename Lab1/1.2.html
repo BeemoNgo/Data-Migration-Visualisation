@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Thao Ngan Ngo"/>
+
+	<title>Task 1.2 HTML and CSS Demo Page</title>
+
+	<style>
+		h1 {
+			color: rgb(79, 150, 255);
+			font-size: 2.5rem;
+    		font-weight: 700;
+    		margin-top: 5rem;
+    		border-bottom: 5px solid #000;
+    		display: inline-block;
+    		padding-bottom: 10px;
+    		font-family: sans-serif;
+			align-self: center;
+		}
+		h2 {
+			font-family: Decovar; /* Change the font for text */
+    		color: white;
+    		background-color:  #fbc1ff;
+    		font-size: 2rem;
+    		text-align: left;
+			padding-top: 20px;
+		}
+		footer {
+			background-color: #fbc1ff;
+		}
+		button {
+			height: 30px; /* set the size for the buttons */
+			width: 50px;
+		}
+
+		.image img {
+			width: 700px;
+			display: block;
+			margin-left: auto;
+  			margin-right: auto;
+		}
+		#bt1 {
+			background-color: #A459D1;
+		}
+		#bt2 {
+			background-color: #F16767;
+		}
+		#bt3 {
+			background-color: #FFB84C;
+		}
+		.buttons {
+			display: block;
+			border: none;
+			color: white;
+			text-align: center;
+			border-radius: 5px;
+			border: none;
+			margin: center;
+			cursor: pointer; /* Let the mouse to be displayed when it points the elements */
+
+		}
+		button{
+			border: none;
+			color: white;
+			text-align: center;
+			border-radius: 5px;
+			border: none;
+			margin: center;
+			cursor: pointer;
+		}
+
+
+		figcaption {
+			text-align: center;
+		}
+
+		body {
+ 			 background-color: #B9F3E4 ;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Title of Article about Interesting Visualisation</h1>
+	<h2>Author of Interesting Article</h2>
+	<p>Lorem ipsum dolor sit amet consectetur, <b>adipisicing</b> elit. Perferendis rerum totam <i>incidunt</i> qui. Ut velit nesciunt praesentium non sit. Libero sapiente explicabo id magni sit pariatur harum sequi, est odio.</p>
+	<ul>
+		<li>Lorem ipsum</li>
+		<li>Nulla DVDSV</li>
+		<li>dflf ekwfjwejf wEFJOew ;FK;M;LDMSV</li>
+		<li>WJJCoksdov sdkjfoisjf eeeccs</li>
+	</ul>
+	<div class = "buttons">
+		<button id="bt1"  onclick="fig1()">2019</button>
+		<button id="bt2"  onclick="fig2()">2021</button>
+		<button id="bt3"  onclick="fig3()">Both</button>
+	</div>
+	<p></p>
+	<div class="image">
+		<img id="Image" src="pet2019.png" alt="pet2019">
+		<figcaption id="fig">Fig1. Percent of popular pets owned by Australia in 2019.</figcaption>
+	</div>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dicta perspiciatis, facilis rerum quaerat sequi eum aspernatur repudiandae necessitatibus sint hic, ipsam distinctio eaque harum adipisci! Soluta itaque commodi atque?</p>
+
+
+	<footer>COS30045 Data Visualisation<br>
+		 Thao Ngan Ngo</footer>
+	<footer></footer>
+
+	<script>
+		function fig1() {
+			document.getElementById('Image')
+			.src = "pet2019.png";
+			document.getElementById('fig')
+			.innerHTML = "Fig1. Percent of popular pets owned by Australia in 2019.";
+		}
+
+		function fig2() {
+			document.getElementById('Image')
+			.src = "pet2021.png";
+			document.getElementById('fig')
+			.innerHTML = "Fig2. Percent of popular pets owned by Australia in 2021.";
+		}
+
+		function fig3() {
+			document.getElementById('Image')
+			.src = "compare.png";
+			document.getElementById('fig')
+			.innerHTML = "Fig3. Percent of most popular pets owned by Australia in 2019 and 2021."
+		}
+
+
+	</script>
+
+
+</body>
+</html>
